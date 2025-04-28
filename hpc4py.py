@@ -1,4 +1,4 @@
-pip install cupy
+!pip install cupy
 
 import cupy as cp
 
