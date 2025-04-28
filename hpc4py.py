@@ -1,5 +1,3 @@
-!pip install cupy
-
 import cupy as cp
 
 def initialize_vector(size):
@@ -12,7 +10,7 @@ def add_vectors(A, B):
     return A + B
 
 def multiply_matrices(A, B):
-    return A @ B  # or cp.matmul(A, B)
+    return A @ B
 
 def print_vector(vector):
     print(' '.join(map(str, cp.asnumpy(vector))))
@@ -25,7 +23,6 @@ def print_matrix(matrix):
 def main():
     N = 4
 
-    # Vector addition
     A = initialize_vector(N)
     B = initialize_vector(N)
 
@@ -40,7 +37,6 @@ def main():
     print("Addition:")
     print_vector(C)
 
-    # Matrix multiplication
     D = initialize_matrix(N)
     E = initialize_matrix(N)
 
@@ -55,5 +51,5 @@ def main():
     print("Multiplication:")
     print_matrix(F)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
